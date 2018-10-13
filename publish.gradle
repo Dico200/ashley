@@ -5,7 +5,7 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 group = 'com.badlogicgames.ashley'
-version = '1.7.4'
+version = '1.7.4-ktx'
 ext.packaging = 'jar'
 
 def isDevBuild
@@ -13,6 +13,9 @@ def isCiBuild
 def isReleaseBuild
 
 def sonatypeRepositoryUrl
+
+properties.remove("release")
+properties.remove("snapshot")
 
 //set build variables based on build type (release, continuous integration, development)
 if(hasProperty("release")) {

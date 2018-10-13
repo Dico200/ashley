@@ -12,6 +12,10 @@ subprojects {
     }
 }
 
+allprojects {
+    version = "1.7.4-ktx"
+}
+
 ext {
     projectGroup = "ashley"
     gdxVersion = "1.9.4"
